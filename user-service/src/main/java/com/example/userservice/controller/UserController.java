@@ -40,7 +40,6 @@ public class UserController {
                 + ", token secret=" + env.getProperty("token.secret")
                 + ", gateway ip=" + env.getProperty("gateway.ip")
                 + ", token expiration time=" + env.getProperty("token.expiration_time"));
-
     }
 
     @GetMapping("/welcome")
