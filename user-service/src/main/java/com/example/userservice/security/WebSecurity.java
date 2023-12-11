@@ -38,7 +38,7 @@ public class WebSecurity {
         http.authorizeRequests()
                 .antMatchers("/error/**").permitAll()
                 .antMatchers("/**")
-                .access("hasIpAddress(env.getProperty(\"gateway.ip\"))")
+                .access("hasIpAddress('" + env.getProperty("gateway.ip") + "')")
                 .and()
                 .addFilter(getAuthenticationFiler());
 
