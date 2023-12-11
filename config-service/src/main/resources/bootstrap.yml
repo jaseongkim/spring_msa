@@ -1,6 +1,7 @@
 encrypt:
 #  key: abcdefghijklmnopqrstuvwxyz0123456789
   key-store:
-    location: file:///Users/jasun/Desktop/develop/keystore/apiEncryptionKey.jks
+#    location: file:///Users/jasun/Desktop/develop/keystore/apiEncryptionKey.jks
+    location: file://apiEncryptionKey.jks
     password: test1234
     alias : apiEncryptionKey

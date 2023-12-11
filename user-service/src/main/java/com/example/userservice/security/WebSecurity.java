@@ -25,6 +25,7 @@ public class WebSecurity {
 
     @Bean
     public AuthenticationManager authenticationManager() throws Exception{
+
         return this.authenticationConfiguration.getAuthenticationManager();
     }
 
@@ -37,7 +38,7 @@ public class WebSecurity {
         http.authorizeRequests()
                 .antMatchers("/error/**").permitAll()
                 .antMatchers("/**")
-                .access("hasIpAddress('127.0.0.1')")
+                .access("hasIpAddress(env.getProperty(\"gateway.ip\"))")
                 .and()
                 .addFilter(getAuthenticationFiler());
 
